@@ -31,21 +31,23 @@
     }
 
     /* Chat container styling */
-    .chat-container {
+   .chat-container {
   width: 100%;
   max-width: 600px;
   height: 90vh;
-  background: rgba(43, 108, 176, 0.2); /* image-color + transparency */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05); /* semi-transparent */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(16px); /* frosted glass */
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  z-index: 1;
-  backdrop-filter: blur(8px); /* blur behind for glassy effect */
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
+  padding: 0;
+  transition: all 0.3s ease-in-out;
 }
+
 
 
 .chat-header {
@@ -55,9 +57,14 @@
   font-size: 1.25rem;
   font-weight: bold;
   text-align: center;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chat-input-area {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 
@@ -124,6 +131,20 @@
     .chat-input-area button:hover {
       background-color: #2E0E2D;
     }
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url("/static/photo.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+.bot {
+  align-self: flex-start;
+  background-color: #2E0E2D;
+  color: #ffffff; /* Changed from #333 to white */
+  border-bottom-left-radius: 4px;
+}
+
   </style>
 </head>
 <body>
